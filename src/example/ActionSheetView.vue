@@ -1,5 +1,5 @@
 <template>
-  <div class="page" style="overflow: hidden">
+  <div class="page actionSheet" style="overflow: hidden">
       <div class="hd">
           <h1 class="page_title">ActionSheet</h1>
       </div>

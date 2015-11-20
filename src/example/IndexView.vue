@@ -15,7 +15,7 @@
                 <div class="weui_cell_ft">
                 </div>
             </a>
-            <a class="weui_cell js_cell" v-link="'toast'" data-id="cell">
+            <a class="weui_cell js_cell" v-link="'cell'" data-id="cell">
                 <span class="weui_cell_hd"><img src="/images/icon_nav_cell.png" class="icon_nav" alt=""></span>
                 <div class="weui_cell_bd weui_cell_primary">
                     <p>Cell</p>
@@ -39,7 +39,7 @@
                 <div class="weui_cell_ft">
                 </div>
             </a>
-            <a class="weui_cell js_cell" href="javascript:;" data-id="progress">
+            <a class="weui_cell js_cell" v-link="'progress'" data-id="progress">
                 <span class="weui_cell_hd"><img src="/images/icon_nav_button.png" class="icon_nav" alt=""></span>
                 <div class="weui_cell_bd weui_cell_primary">
                     <p>Progress</p>
@@ -47,7 +47,7 @@
                 <div class="weui_cell_ft">
                 </div>
             </a>
-            <a class="weui_cell js_cell" href="javascript:;" data-id="msg">
+            <a class="weui_cell js_cell" v-link="'msg'" data-id="msg">
                 <span class="weui_cell_hd"><img src="/images/icon_nav_msg.png" class="icon_nav" alt=""></span>
                 <div class="weui_cell_bd weui_cell_primary">
                     <p>Msg Page</p>
@@ -55,7 +55,7 @@
                 <div class="weui_cell_ft">
                 </div>
             </a>
-            <a class="weui_cell js_cell" href="javascript:;" data-id="article">
+            <a class="weui_cell js_cell" v-link="'article'" data-id="article">
                 <span class="weui_cell_hd"><img src="/images/icon_nav_article.png" class="icon_nav" alt=""></span>
                 <div class="weui_cell_bd weui_cell_primary">
                     <p>Article Page</p>

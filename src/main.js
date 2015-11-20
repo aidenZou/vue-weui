@@ -7,6 +7,10 @@ import ButtonView from './example/ButtonView.vue'
 import ToastView from './example/ToastView.vue'
 import DialogView from './example/DialogView.vue'
 import ActionSheet from './example/ActionSheetView.vue'
+import MsgView from './example/MsgView.vue'
+import ArticleView from './example/ArticleView.vue'
+import CellView from './example/CellView.vue'
+import ProgressView from './example/ProgressView.vue'
 
 // install router
 Vue.use(Router)
@@ -33,6 +37,18 @@ router.map({
   },
   '/actionsheet': {
     component: ActionSheet
+  },
+  '/msg': {
+    component: MsgView
+  },
+  '/article': {
+    component: ArticleView
+  },
+  '/cell': {
+    component: CellView
+  },
+  '/progress': {
+    component: ProgressView
   }
 })
 
