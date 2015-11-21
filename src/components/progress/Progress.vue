@@ -1,10 +1,9 @@
 <template>
-  <div class="weui_progress">
-    <!-- {{size}} -->
+  <div class="weui_progress" v-if="isShow">
       <div class="weui_progress_bar">
           <div class="weui_progress_inner_bar" v-bind:style="{ width: size + '%' }"></div>
       </div>
-      <a href="javascript:;" class="weui_progress_opr">
+      <a href="javascript:;" class="weui_progress_opr" v-on:click="isShow=false">
           <i class="weui_icon_cancel"></i>
       </a>
   </div>
@@ -30,6 +29,11 @@ export default {
       //   return value;
       // }
     }
+  },
+  data(){
+    return {
+      isShow:true
+    };
   }
 }
 </script>

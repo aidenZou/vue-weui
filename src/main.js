@@ -11,6 +11,7 @@ import MsgView from './example/MsgView.vue'
 import ArticleView from './example/ArticleView.vue'
 import CellView from './example/CellView.vue'
 import ProgressView from './example/ProgressView.vue'
+import IconsView from './example/IconsView.vue'
 
 // install router
 Vue.use(Router)
@@ -49,6 +50,9 @@ router.map({
   },
   '/progress': {
     component: ProgressView
+  },
+  '/icons': {
+    component: IconsView
   }
 })
 

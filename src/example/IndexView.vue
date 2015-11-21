@@ -71,7 +71,7 @@
                 <div class="weui_cell_ft">
                 </div>
             </a>
-            <a class="weui_cell js_cell" href="javascript:;" data-id="icons">
+            <a class="weui_cell js_cell" v-link="'icons'" data-id="icons">
                 <span class="weui_cell_hd"><img src="/images/icon_nav_icons.png" class="icon_nav" alt=""></span>
                 <div class="weui_cell_bd weui_cell_primary">
                     <p>Icons</p>
