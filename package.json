@@ -1,0 +1,51 @@
+{
+  "name": "vue-weui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --inline --hot --quiet",
+    "build": "NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidenzou/vue-weui.git"
+  },
+  "author": "Aiden Zou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aidenzou/vue-weui/issues"
+  },
+  "homepage": "https://github.com/aidenzou/vue-weui#readme",
+  "devDependencies": {
+    "babel-core": "^6.1.21",
+    "babel-loader": "^6.1.0",
+    "babel-plugin-transform-runtime": "^6.1.18",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-runtime": "^6.1.18",
+    "css-loader": "^0.21.0",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.4.0",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^7.0.3",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  },
+  "dependencies": {
+    "es6-promise": "^3.0.2",
+    "firebase": "^2.3.1",
+    "vue": "^1.0.8",
+    "vue-router": "^0.7.6"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  }
+}
