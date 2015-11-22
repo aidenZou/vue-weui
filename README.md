@@ -1,6 +1,6 @@
 # vue-weui
 
-weui for vue.js
+weui for vue(vue.js + vue-router.js + weui)
 
 ## 开发
 
