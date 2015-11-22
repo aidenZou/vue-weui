@@ -28,7 +28,12 @@
 </template>
 
 <script>
+import Icon from '../components/icon/Icon.vue'
+
 export default {
-  name: 'IconsView'
+  name: 'IconsView',
+  components:{
+    // Icon
+  }
 }
 </script>

@@ -17,10 +17,12 @@
 </template>
 
 <style lang="less">
+// @import "../style/weui.less";
+@import "../style/base/reset";
+
 html, body {
     height: 100%;
     -webkit-tap-highlight-color: transparent;
-
 }
 
 body, .page {
