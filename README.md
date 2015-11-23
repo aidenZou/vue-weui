@@ -16,7 +16,7 @@ npm run dev
 ## Links
 
 - [实例查看](http://aidenzou.github.io/vue-weui/#!/)
-- [weui](http://weui.github.io/weui/)
+- [weui](https://github.com/weui/weui)
 - [react-weui](https://github.com/n7best/react-weui)
 
 ## QQ群
