@@ -1,4 +1,3 @@
-<!--toast-->
 <template>
   <div id="toast" v-show="isShow">
       <div class="weui_mask_transparent"></div>
@@ -12,15 +11,17 @@
 <script>
 import Icon from '../icon/Icon.vue'
 
+/**
+ * 组件内部自动关闭
+ */
 export default {
 
   name: 'Toast',
-
   props:{
-    // showToast:false,
     isShow:{
       type:Boolean,
-      default:false,
+      required: true,
+      default:false
       // update: function (value) {
       //   console.log(1111)
       //   // return value;
@@ -28,30 +29,12 @@ export default {
     }
   },
   created(){
-    var self = this;
-    self.$watch('isShow', function (newVal, oldVal) {
-      //TODO 更新策略
-      setTimeout(function () {
-          self.isShow = false;
+    this.$watch('isShow', function (newVal, oldVal) {
+      var _t = setTimeout(() => {
+        this.isShow = false;
+        clearTimeout(_t);
       }, 3000);
     })
-  },
-  methods: {
-    // showToast(){
-    //   var self = this;
-    //   self.show_toast = true;
-    //   setTimeout(function () {
-    //       self.show_toast = false;
-    //   }, 3000);
-    // },
-
-    // loading_toast(){
-    //   var self = this;
-    //   self.loadingToast = true;
-    //   setTimeout(function () {
-    //       self.loadingToast = false;
-    //   }, 3000);
-    // }
   }
 }
 </script>
