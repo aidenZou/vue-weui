@@ -37,14 +37,14 @@ export default {
         };
     },
     created() {
-        this.$on('on_alert_confirm', function() {
+        this.$on('on-alert-confirm', function() {
             this.showAlert = false;
         });
-        this.$on('on_confirm_cancel', function() {
+        this.$on('on-confirm-cancel', function() {
             alert('你是要取消吗？这不太好吧');
             // this.showConfirm = false;
         });
-        this.$on('on_confirm_confirm', function() {
+        this.$on('on-confirm-confirm', function() {
             // this.showAlert = true;
             alert('恩，这才乖嘛！');
             this.showConfirm = false;
