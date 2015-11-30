@@ -1,5 +1,5 @@
 <template>
-  <div id="loadingToast" class="weui_loading_toast" v-show="isShow">
+  <div id="loadingToast" class="weui_loading_toast">
       <div class="weui_mask_transparent"></div>
       <div class="weui_toast">
           <div class="weui_loading">
@@ -16,14 +16,7 @@
  */
 export default {
 
-  name: 'Loading',
-  props:{
-    isShow:{
-      type:Boolean,
-      required: true,
-      default:false
-    }
-  }
+  name: 'Loading'
 }
 </script>
 

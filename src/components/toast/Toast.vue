@@ -1,5 +1,5 @@
 <template>
-  <div id="toast" v-show="isShow">
+  <div id="toast" v-show="show">
       <div class="weui_mask_transparent"></div>
       <div class="weui_toast">
           <i class="weui_icon_toast"></i>
@@ -18,7 +18,7 @@ export default {
 
   name: 'Toast',
   props:{
-    isShow:{
+    show:{
       type:Boolean,
       required: true,
       default:false
@@ -29,9 +29,9 @@ export default {
     }
   },
   created(){
-    this.$watch('isShow', function (newVal, oldVal) {
+    this.$watch('show', function (newVal, oldVal) {
       var _t = setTimeout(() => {
-        this.isShow = false;
+        this.show = false;
         clearTimeout(_t);
       }, 3000);
     })
