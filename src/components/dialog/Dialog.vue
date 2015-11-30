@@ -1,40 +1,9 @@
-<template>
-  <div class="weui_dialog_alert" id="dialog2" v-show="isShow">
-      <div class="weui_mask"></div>
-      <div class="weui_dialog">
-          <div class="weui_dialog_hd"><strong class="weui_dialog_title">弹窗标题</strong></div>
-          <div class="weui_dialog_bd">弹窗内容，告知当前页面信息等</div>
-          <div class="weui_dialog_ft">
-              <a href="javascript:;" class="weui_btn_dialog primary" v-on:click="close()">确定</a>
-          </div>
-      </div>
-  </div>
-</template>
-
-<script>
-export default {
-  name:'Alert',
-  props:{
-    isShow:{
-      type:Boolean,
-      default:false
-    }
-  },
-  methods:{
-    close(){
-      this.isShow = false;
-    }
-  }
-}
-</script>
-
 <style lang="less">
-@import "../../style/base/fn";
 
+@import "../../style/base/fn";
 @weuiDialogBackgroudColor: #FAFAFC;
 @weuiDialogLineColor: #D5D5D6;
 @weuiDialogLinkColor: #3CC51F;
-
 .weui_dialog {
     position: fixed;
     z-index: 13;
@@ -42,7 +11,6 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     background-color: @weuiDialogBackgroudColor;
     text-align: center;
     border-radius: 3px;
@@ -82,7 +50,8 @@ export default {
         color: @weuiDialogLinkColor;
         text-decoration: none;
         .setTapColor;
-        &:active, &:hover {
+        &:active,
+        &:hover {
             text-decoration: none;
         }
     }
@@ -128,4 +97,70 @@ export default {
         width: 35%;
     }
 }
+
 </style>
+
+<template>
+
+<div :class="'weui_dialog_' + type" v-show="show">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd">
+            <strong class="weui_dialog_title">{{title}}</strong>
+        </div>
+        <div class="weui_dialog_bd">
+            <slot>请注意，这里可以自定义(支持html)</slot>
+        </div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" class="weui_btn_dialog default" v-if="type === 'confirm'" @click="cancel($event)">{{cancelBtn}}</a>
+            <a href="javascript:;" class="weui_btn_dialog primary" @click="confirm($event)">{{confirmBtn}}</a>
+        </div>
+    </div>
+</div>
+
+</template>
+
+<script>
+
+export default {
+    name: 'Dialog',
+    props: {
+        //类型：alert,confirm
+        type: {
+            type: String,
+            required: false,
+            default: 'alert'
+        },
+        //标题
+        title: {
+            type: String,
+            required: false,
+            default: '温馨提示'
+        },
+        show: {
+            type: Boolean,
+            required: true,
+            default: true
+        },
+        cancelBtn: {
+            type: String,
+            required: false,
+            default: '取消'
+        },
+        confirmBtn: {
+            type: String,
+            required: false,
+            default: '确定'
+        }
+    },
+    methods: {
+        cancel() {
+            this.show = false;
+        },
+        confirm() {
+            this.show = false;
+        }
+    }
+}
+
+</script>

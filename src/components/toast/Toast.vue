@@ -1,5 +1,5 @@
 <template>
-  <div id="toast" v-show="show">
+  <div v-show="show">
       <div class="weui_mask_transparent"></div>
       <div class="weui_toast">
           <i class="weui_icon_toast"></i>
@@ -30,10 +30,12 @@ export default {
   },
   created(){
     this.$watch('show', function (newVal, oldVal) {
-      var _t = setTimeout(() => {
-        this.show = false;
-        clearTimeout(_t);
-      }, 3000);
+      if(newVal) {
+        let _t = setTimeout(() => {
+          this.show = false;
+          clearTimeout(_t);
+        }, 3000);
+      }
     })
   }
 }
