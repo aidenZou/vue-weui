@@ -112,8 +112,8 @@
             <slot>请注意，这里可以自定义(支持html)</slot>
         </div>
         <div class="weui_dialog_ft">
-            <a href="javascript:;" class="weui_btn_dialog default" v-if="type === 'confirm'" @click="cancel($event)">{{cancelBtn}}</a>
-            <a href="javascript:;" class="weui_btn_dialog primary" @click="confirm($event)">{{confirmBtn}}</a>
+            <a href="javascript:;" class="weui_btn_dialog default" v-if="type === 'confirm'" @click="dispatch($event,  type + '_cancel')">{{cancelBtn}}</a>
+            <a href="javascript:;" class="weui_btn_dialog primary" @click="dispatch($event, type + '_confirm')">{{confirmBtn}}</a>
         </div>
     </div>
 </div>
@@ -154,11 +154,15 @@ export default {
         }
     },
     methods: {
-        cancel() {
-            this.show = false;
-        },
-        confirm() {
-            this.show = false;
+        // cancel() {
+        //     this.show = false;
+        // },
+        // confirm() {
+        //     this.show = false;
+        // }，
+        dispatch(event, eventStr) {
+            this.$dispatch('on_' + eventStr);
+            // this.show = false;
         }
     }
 }
