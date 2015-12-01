@@ -199,7 +199,6 @@
                 </div>
             </div>
         </div>
-        <Tooltips></Tooltips>
         <div class="weui_cells_title">表单报错</div>
         <div class="weui_cells weui_cells_form">
             <div class="weui_cell weui_cell_warn">
@@ -229,12 +228,15 @@
 
             <div class="weui_cell weui_cell_select weui_select_before">
                 <div class="weui_cell_hd">
+                  <we-select :options="areaCodeOptions" :selected.sync="areaCodeSelected"></we-select>
+                    <!--
                     <select class="weui_select" name="select2">
                         <option value="1">+86</option>
                         <option value="2">+80</option>
                         <option value="3">+84</option>
                         <option value="4">+87</option>
                     </select>
+                    -->
                 </div>
                 <div class="weui_cell_bd weui_cell_primary">
                     <input class="weui_input" type="text" placeholder="请输入号码"/>
@@ -245,38 +247,67 @@
         <div class="weui_cells weui_cells_split">
             <div class="weui_cell weui_cell_select">
                 <div class="weui_cell_bd weui_cell_primary">
-                    <select class="weui_select" name="select1">
+                    <!-- <select class="weui_select" name="select1">
                         <option selected="" value="1">微信号</option>
                         <option value="2">QQ号</option>
                         <option value="3">Email</option>
-                    </select>
+                    </select> -->
+                    <we-select :options="contactOptions" :selected.sync="contactSelected"></we-select>
                 </div>
             </div>
             <div class="weui_cell weui_cell_select weui_select_after">
                 <div class="weui_cell_hd">
-                    国家/地区
+                    国家/地区{{nationSelected}}
                 </div>
                 <div class="weui_cell_bd weui_cell_primary">
-                    <select class="weui_select" name="select2">
+                    <!--
+                    <select class="weui_select" v-model="nationSelected">
                         <option value="1">中国</option>
                         <option value="2">美国</option>
                         <option value="3">英国</option>
+                        <option v-for="option in nationOption">{{option}}</option>
                     </select>
+                    -->
+                    <we-select :after="true" :options="nationOptions" :selected.sync="nationSelected">
+                        <span slot="header">国家/地区</span>
+                    </we-select>
                 </div>
             </div>
         </div>
+        <Tooltips v-show="errorCount > 0">错误提醒&nbsp;{{errorCount}}秒后消失</Tooltips>
     </div>
   </div>
 </template>
 
 <script>
-import Tooltips from '../components//msg//Tooltips.vue'
+import WeSelect from '../components/cell/Select.vue'
+import Tooltips from '../components/msg//Tooltips.vue'
 
 export default {
   name: 'CellView',
-  components:{
+  components: {
+    WeSelect,
     Tooltips
-  }
+  },
+  data() {
+    return{
+      areaCodeOptions: ['+86', '+80', '+84', '+87'],
+      areaCodeSelected: 1,
+      contactOptions: ['微信号', 'QQ号', 'Email'],
+      contactSelected: 2,
+      nationOptions:['中国', '美国', '英国'],
+      nationSelected: 1,
+      errorCount: 3
+    }
+  },
+  ready() {
+   const handler = setInterval(() => {
+     if (this.errorCount === 1) {
+       clearInterval(handler);
+     }
+     this.errorCount -= 1;
+   }, 1000);
+ }
 }
 </script>
 

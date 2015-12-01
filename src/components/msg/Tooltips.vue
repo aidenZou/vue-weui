@@ -1,30 +1,34 @@
+<style lang="less">
+
+</style>
+
 <template>
-  <div class="weui_toptips weui_warn js_tooltips" v-show="isShow">格式不对</div>
+
+<div class="weui_toptips weui_warn" :style="{display: 'block'}"><slot></slot></div>
+
 </template>
 
 <script>
-export default {
-  name: 'Tooltips',
-  props:{
-    isShow:{
-      type:Boolean,
-      default:true
-    }
-  },
-  created(){
-    var self = this;
-    self.$watch('isShow', function (newVal, oldVal) {
-      //TODO 更新策略
-      setTimeout(function () {
-          self.isShow = false;
-      }, 3000);
-    })
-  }
-}
-</script>
 
-<style lang="less">
-.weui_toptips{
-  display: block;
+export default {
+    name: 'Tooltips',
+    props: {
+        // show: {
+        //     type: Boolean,
+        //     required: false,
+        //     default: false
+        // }
+    },
+    created() {
+        // this.$watch('show', function(newVal, oldVal) {
+        //     if (newVal) {
+        //         let _t = setTimeout(() => {
+        //             this.show = false;
+        //             clearTimeout(_t);
+        //         }, 3000);
+        //     }
+        // })
+    }
 }
-</style>
+
+</script>
