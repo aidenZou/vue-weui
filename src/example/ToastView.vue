@@ -9,9 +9,9 @@
         <a href="javascript:;" class="weui_btn weui_btn_primary" v-on:click="showLoadingToast = true;">点击弹出Loading Toast</a>
     </div>
 
-    <Toast :is-show.sync="showToast"></Toast>
+    <Toast :show.sync="showToast"></Toast>
 
-    <Loading :is-show.sync="showLoadingToast"></Loading>
+    <Loading v-show="showLoadingToast"></Loading>
 
   </div>
 </template>
@@ -32,6 +32,15 @@ export default {
       showToast:false,
       showLoadingToast:false
     }
+  },
+  created(){
+    //模拟关闭
+    this.$watch('showLoadingToast', function (newVal, oldVal) {
+      var _t = setTimeout(() => {
+        this.showLoadingToast = false;
+        clearTimeout(_t);
+      }, 3000);
+    })
   },
   methods: {
   }

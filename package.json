@@ -3,22 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --inline --hot --quiet",
-    "build": "NODE_ENV=production webpack --progress --hide-modules"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aidenzou/vue-weui.git"
-  },
-  "author": "Aiden Zou",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/aidenzou/vue-weui/issues"
-  },
-  "homepage": "https://github.com/aidenzou/vue-weui#readme",
   "devDependencies": {
     "babel-core": "^6.1.21",
     "babel-loader": "^6.1.0",
@@ -36,9 +20,26 @@
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --inline --hot --quiet",
+    "build": "NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidenzou/vue-weui.git"
+  },
+  "author": "Aiden Zou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aidenzou/vue-weui/issues"
+  },
+  "homepage": "https://github.com/aidenzou/vue-weui#readme",
   "dependencies": {
     "es6-promise": "^3.0.2",
+    "file-loader": "^0.8.4",
     "firebase": "^2.3.1",
+    "url-loader": "^0.5.7",
     "vue": "^1.0.8",
     "vue-router": "^0.7.6"
   },
