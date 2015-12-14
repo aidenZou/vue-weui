@@ -21,6 +21,6 @@ export default {
 </script>
 
 <style lang="less">
-@import "../../style/base/fn";
+@import "./style/base/fn";
 
 </style>

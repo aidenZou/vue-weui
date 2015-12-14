@@ -29,8 +29,8 @@ export default {
 </script>
 
 <style lang="less">
-@import "../../style/base/fn";
-// @import "../weui_button";
+@import "./style/base/fn";
+// @import "./weui_button";
 
 .weui_msg {
     padding-top: @weuiMsgPaddingTop;
