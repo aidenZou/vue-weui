@@ -60,8 +60,8 @@ export default {
 
 <style lang="less">
 
-// @import "../style/base/fn";
-@import "../style/widget/weui_button/weui_button.less";
+// @import "../../src/style/base/fn";
+@import "../../src/style/widget/weui_button/weui_button.less";
 
 // // 存在样式优先级的问题，故这里对其他weui_btn的引用放在底部
 // // 主要是button.weui_btn在weui_btn_plain下重写border-width

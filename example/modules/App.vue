@@ -17,8 +17,8 @@
 </template>
 
 <style lang="less">
-// @import "../style/weui.less";
-@import "../style/base/reset";
+// @import "../../src/style/weui.less";
+@import "../../src/style/base/reset";
 
 html, body {
     height: 100%;

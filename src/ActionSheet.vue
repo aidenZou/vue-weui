@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Mask from '../Mask.vue'
+import Mask from './Mask.vue'
 
 export default {
   name:'ActionSheet',
@@ -76,7 +76,7 @@ export default {
 </script>
 
 <style lang="less">
-@import "../../style/base/fn";
+@import "./style/base/fn";
 
 @bgColor:#ECECEC;
 .weui_actionsheet {

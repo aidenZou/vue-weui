@@ -312,10 +312,10 @@ export default {
 </script>
 
 <style lang="less">
-@import "../style/widget/weui_cell/weui_cell_global";
+@import "../../src/style/widget/weui_cell/weui_cell_global";
 
-@import "../style/widget/weui_cell/weui_access";
-@import "../style/widget/weui_cell/weui_check";
-@import "../style/widget/weui_cell/weui_form";
-@import "../style/widget/weui_cell/weui_switch";
+@import "../../src/style/widget/weui_cell/weui_access";
+@import "../../src/style/widget/weui_cell/weui_check";
+@import "../../src/style/widget/weui_cell/weui_form";
+@import "../../src/style/widget/weui_cell/weui_switch";
 </style>

@@ -1,6 +1,6 @@
 <style lang="less">
 
-@import "../../style/base/fn.less";
+@import "./style/base/fn.less";
 .weui_progress {
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@
 
 <script>
 
-import Icon from '../icon/Icon.vue'
+import Icon from './Icon.vue'
 
 export default {
     name: 'Progress',

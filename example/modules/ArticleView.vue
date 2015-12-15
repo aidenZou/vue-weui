@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="less">
-@import "../style/base/fn";
+@import "../../src/style/base/fn";
 
 .weui_article {
     padding: 20px 15px;

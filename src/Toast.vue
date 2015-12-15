@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Icon from '../icon/Icon.vue'
+import Icon from './Icon.vue'
 
 /**
  * 组件内部自动关闭
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="less">
-@import "../../style/base/fn";
+@import "./style/base/fn";
 
 .weui_toast {
     position: fixed;
