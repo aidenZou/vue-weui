@@ -1,3 +1,5 @@
+'use strict'
+
 import Vue from 'vue'
 import Router from 'vue-router'
 
@@ -22,18 +24,18 @@ Vue.use(Router)
 var router = new Router()
 
 router.map({
-  '/':{
+  '/': {
     name: 'index',  // 路径别名
     component: IndexView
   },
-  '/button':{
-    name:'button',
-    component:ButtonView
+  '/button': {
+    name: 'button',
+    component: ButtonView
   },
-  '/toast':{
-    component:ToastView
+  '/toast': {
+    component: ToastView
   },
-  '/dialog':{
+  '/dialog': {
     component: DialogView
   },
   '/actionsheet': {
@@ -61,6 +63,5 @@ router.redirect({
 })
 
 router.start(App, '#app')
-
 
 // function aa(){console.log('hahah')}

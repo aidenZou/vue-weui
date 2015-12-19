@@ -1,3 +1,5 @@
+'use strict'
+
 import actionSheet from './ActionSheet.vue'
 import select from './Select.vue'
 import dialog from './Dialog.vue'
