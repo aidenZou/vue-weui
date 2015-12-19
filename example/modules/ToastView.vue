@@ -18,8 +18,8 @@
 
 <script>
 
-import Toast from '../../src/toast/Toast.vue'
-import Loading from '../../src/toast/Loading.vue'
+import Toast from './../../src/Toast.vue'
+import Loading from './../../src/Loading.vue'
 
 export default {
   name: 'ToastView',

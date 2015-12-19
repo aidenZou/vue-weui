@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Actionsheet from '../../src/action-sheet/ActionSheet.vue'
+import Actionsheet from './../../src/ActionSheet.vue'
 
 export default {
   name: 'ActionSheetView',

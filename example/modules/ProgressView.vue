@@ -30,7 +30,7 @@
 
 <script>
 
-import Progress from '../../src/progress/Progress.vue'
+import Progress from './../../src/Progress.vue'
 
 export default {
     name: 'ProgressView',

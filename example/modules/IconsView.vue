@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import Icon from '../../src/icon/Icon.vue'
+import Icon from './../../src/Icon.vue'
 
 export default {
   name: 'IconsView',

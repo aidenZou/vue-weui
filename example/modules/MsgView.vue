@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Msg from '../../src/msg/Msg.vue'
+import Msg from './../../src/Msg.vue'
 
 export default {
   name:'MsgView',

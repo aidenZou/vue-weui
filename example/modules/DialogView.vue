@@ -22,7 +22,7 @@
 
 <script>
 
-import Dialog from '../../src/dialog/Dialog.vue'
+import Dialog from './../../src/Dialog.vue'
 
 export default {
     name: 'DialogView',

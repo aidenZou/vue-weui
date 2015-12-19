@@ -167,7 +167,7 @@
                     <input class="weui_input" type="number" placeholder="请输入验证码"/>
                 </div>
                 <div class="weui_cell_ft">
-                    <img src="/images/vcode.jpg" />
+                    <img src="/example/images/vcode.jpg" />
                 </div>
             </div>
             <div class="weui_cell">
@@ -183,7 +183,7 @@
                 </div>
                 <div class="weui_cell_ft">
                     <i class="weui_icon_warn"></i>
-                    <img src="/images/vcode.jpg" />
+                    <img src="/example/images/vcode.jpg" />
                 </div>
             </div>
         </div>
@@ -280,8 +280,8 @@
 </template>
 
 <script>
-import WeSelect from '../../src/cell/Select.vue'
-import Tooltips from '../../src/msg//Tooltips.vue'
+import WeSelect from './../../src/Select.vue'
+import Tooltips from './../../src/Tooltips.vue'
 
 export default {
   name: 'CellView',
