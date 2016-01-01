@@ -274,7 +274,7 @@
                 </div>
             </div>
         </div>
-        <Tooltips v-show="errorCount > 0">错误提醒&nbsp;{{errorCount}}秒后消失</Tooltips>
+        <Tooltips :text.sync="tooltipsWarn" :type="'warn'"></Tooltips>
     </div>
   </div>
 </template>
@@ -297,16 +297,19 @@ export default {
       contactSelected: 2,
       nationOptions:['中国', '美国', '英国'],
       nationSelected: 1,
-      errorCount: 3
+      errorCount: 3,
+      errorTooltips: false,
+      tooltipsWarn: ''
     }
   },
   ready() {
-   const handler = setInterval(() => {
-     if (this.errorCount === 1) {
-       clearInterval(handler);
-     }
+    this.tooltipsWarn = '温馨提示：你写错啦你知不知道'
+    const handler = setInterval(() => {
+    if (this.errorCount === 1) {
+      clearInterval(handler);
+    }
      this.errorCount -= 1;
-   }, 1000);
+    }, 1000);
  }
 }
 </script>

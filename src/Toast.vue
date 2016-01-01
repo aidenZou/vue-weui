@@ -33,17 +33,9 @@ export default {
     // 持续时间(毫秒)
     duration: {
       type: Number,
-      default: 0
-    },
+      default: 3000
+    }
   },
-  // data: {
-  //   _timeout: null
-  // },
-  // data() {
-  //   return {
-  //       _timeout: null
-  //   };
-  // },
   watch: {
     show(val) {
       if (this._timeout) clearTimeout(this._timeout)
