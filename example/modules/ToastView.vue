@@ -5,11 +5,13 @@
     </div>
     <div class="bd spacing">
         <!-- <a href="javascript:;" class="weui_btn weui_btn_primary" id="showToast" v-on:click="show_toast()">点击弹出Toast</a> -->
-        <a href="javascript:;" class="weui_btn weui_btn_primary" v-on:click="showToast = true;">点击弹出Toast</a>
+        <a href="javascript:;" class="weui_btn weui_btn_primary" v-on:click="showToast = true;">点击弹出Toast(手动关闭)</a>
+        <a href="javascript:;" class="weui_btn weui_btn_primary" v-on:click="showToast3000 = true;">点击弹出Toast(持续300毫秒)</a>
         <a href="javascript:;" class="weui_btn weui_btn_primary" v-on:click="showLoadingToast = true;">点击弹出Loading Toast</a>
     </div>
 
     <Toast :show.sync="showToast"></Toast>
+    <Toast :show.sync="showToast3000" :duration="3000">我只持续3秒哦</Toast>
 
     <Loading v-show="showLoadingToast"></Loading>
 
@@ -29,8 +31,9 @@ export default {
   },
   data(){
     return {
-      showToast:false,
-      showLoadingToast:false
+      showToast: false,
+      showToast3000: false,
+      showLoadingToast: false
     }
   },
   created(){

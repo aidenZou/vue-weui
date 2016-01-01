@@ -3,7 +3,7 @@
       <div class="weui_mask_transparent"></div>
       <div class="weui_toast">
           <i class="weui_icon_toast"></i>
-          <p class="weui_toast_content">已完成</p>
+          <p class="weui_toast_content"><slot>已完成</slot></p>
       </div>
   </div>
 </template>
@@ -17,26 +17,40 @@ import Icon from './Icon.vue'
 export default {
 
   name: 'Toast',
-  props:{
-    show:{
-      type:Boolean,
+  props: {
+    show: {
+      type: Boolean,
       required: true,
-      default:false
-      // update: function (value) {
-      //   console.log(1111)
-      //   // return value;
-      // }
-    }
+      default: false,
+      twoWay: true
+    },
+    // 类型：暂不提供
+    type: {
+      type: String
+      // default:
+
+    },
+    // 持续时间(毫秒)
+    duration: {
+      type: Number,
+      default: 0
+    },
   },
-  created(){
-    this.$watch('show', function (newVal, oldVal) {
-      if(newVal) {
-        let _t = setTimeout(() => {
-          this.show = false;
-          clearTimeout(_t);
-        }, 3000);
+  // data: {
+  //   _timeout: null
+  // },
+  // data() {
+  //   return {
+  //       _timeout: null
+  //   };
+  // },
+  watch: {
+    show(val) {
+      if (this._timeout) clearTimeout(this._timeout)
+      if (val && !!this.duration) {
+        this._timeout = setTimeout(()=> this.show = false, this.duration)
       }
-    })
+    }
   }
 }
 </script>
