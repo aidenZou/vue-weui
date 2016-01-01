@@ -10,7 +10,7 @@
         <a href="javascript:;" class="weui_btn weui_btn_primary" v-on:click="showLoadingToast = true;">点击弹出Loading Toast</a>
     </div>
 
-    <Toast :show.sync="showToast"></Toast>
+    <Toast :show.sync="showToast" :duration="0"></Toast>
     <Toast :show.sync="showToast3000" :duration="3000">我只持续3秒哦</Toast>
 
     <Loading v-show="showLoadingToast"></Loading>
