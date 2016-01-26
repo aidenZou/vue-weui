@@ -21,44 +21,7 @@ export default {
 </script>
 
 <style lang="less">
-@import "./style/base/fn";
 
-.weui_mask {
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .6);
-}
+@import "./style/widget/weui_tips/weui_mask";
 
-.weui_mask_transparent {
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.weui_mask_transition{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0);
-    transition:background .3s;
-}
-.weui_fade_toggle{
-    background: rgba(0,0,0,.6);
-}
-
-//TODO my add
-.weui_mask_transition{
-  display: block;
-}
 </style>

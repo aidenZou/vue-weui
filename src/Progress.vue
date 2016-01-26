@@ -1,28 +1,6 @@
 <style lang="less">
 
-@import "./style/base/fn.less";
-.weui_progress {
-    display: flex;
-    align-items: center;
-}
-
-.weui_progress_bar {
-    background-color: @weuiProgressBg;
-    height: @weuiProgressHeight;
-    flex: 1;
-}
-
-.weui_progress_inner_bar {
-    width: 0;
-    height: 100%;
-    background-color: @weuiProgressColor;
-}
-
-.weui_progress_opr {
-    display: block;
-    margin-left: 15px;
-    font-size: 0;
-}
+@import "./style/widget/weui_progress/weui_progress";
 
 </style>
 

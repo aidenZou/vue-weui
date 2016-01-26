@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style lang="less">
-@import "./style/base/fn";
+
+@import "./style/widget/weui_tips/weui_toast";
 
 </style>
