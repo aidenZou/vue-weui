@@ -1,18 +1,11 @@
 <template>
   <div class="container js_container">
-    <!-- <div class="page"> -->
-      <!-- <div class="hd">
-          <h1 class="page_title">WeUI</h1>
-          <p class="page_desc">为微信Web服务量身设计</p>
-      </div> -->
       <!-- main view -->
       <router-view
         class="view"
         keep-alive
-        transition
-        transition-mode="out-in">
+        transition="slide">
       </router-view>
-    <!-- </div> -->
   </div>
 </template>
 
@@ -222,4 +215,32 @@ body, .page {
 .page.slideOut {
     animation: slideOut .2s forwards;
 }
+
+
+
+body {
+  overflow-x: hidden;
+}
+
+.slide-transition {
+  transition: left 0.3s ease;
+  width: 100%;
+}
+
+.slide-enter, .slide-leave {
+  left: 100%;
+}
+
+.slide-leave {
+  left: 100%;
+}
+
+.app-transition {
+  transition: opacity 0.3s ease;
+}
+
+.app-enter, .app-leave {
+  opacity: 0;
+}
+
 </style>

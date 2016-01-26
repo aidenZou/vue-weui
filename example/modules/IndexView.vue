@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page" transition="app">
     <div class="hd">
         <h1 class="page_title">WeUI</h1>
         <p class="page_desc">为微信Web服务量身设计</p>
