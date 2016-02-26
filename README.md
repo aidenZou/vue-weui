@@ -1,6 +1,6 @@
 # vue-weui
 
-weui for vue(vue.js + vue-router.js + weui)
+weui for vue(vue + vue-router + weui + es6 + webpack)
 
 ## 开发
 
