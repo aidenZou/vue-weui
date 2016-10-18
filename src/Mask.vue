@@ -1,5 +1,5 @@
 <template>
-  <div class="weui_mask_transition" :class="{weui_fade_toggle:isShow}" id="mask" v-show="isShow" v-on:click="close()"></div>
+  <div class="weui_mask_transition" transition="maskts" :class="{weui_fade_toggle:isShow}" id="mask" v-show="isShow" v-on:click="close()"></div>
 </template>
 
 <script>
@@ -23,5 +23,4 @@ export default {
 <style lang="less">
 
 @import "./style/widget/weui_tips/weui_mask";
-
 </style>

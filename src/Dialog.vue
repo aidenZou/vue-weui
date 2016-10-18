@@ -7,7 +7,7 @@
 <template>
 
 <div :class="'weui_dialog_' + type" v-show="show">
-    <div class="weui_mask"></div>
+
     <div class="weui_dialog">
         <div class="weui_dialog_hd">
             <strong class="weui_dialog_title">{{title}}</strong>
@@ -25,7 +25,6 @@
 </template>
 
 <script>
-
 export default {
     name: 'Dialog',
     props: {
