@@ -8,7 +8,8 @@
         <a href="javascript:;" class="weui_btn weui_btn_primary" v-on:click="showAlert=true;">点击弹出Dialog Alert</a>
         <a href="javascript:;" class="weui_btn weui_btn_primary" v-on:click="showConfirm=true;">点击弹出Dialog Confirm</a>
     </div>
-
+    <mask :is-show.sync="showAlert"></mask>
+    <mask :is-show.sync="showConfirm"></mask>
     <Dialog :show.sync="showAlert"></Dialog>
 
     <Dialog :show.sync="showConfirm" type="confirm" title="弹窗标题">
@@ -23,12 +24,13 @@
 <script>
 
 import Dialog from './../../src/Dialog.vue'
+import Mask from './../../src/Mask.vue'
 
 export default {
     name: 'DialogView',
     components: {
-        Dialog
-        // Button
+        Dialog,
+        Mask
     },
     data() {
         return {
