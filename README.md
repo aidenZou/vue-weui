@@ -22,3 +22,5 @@ npm run dev
 ## QQ群
 
 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=c735b2b5e7d83d2043584e78d1c9d0475f6064e82701ec01ed28e7aa163946ea"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="vue.js" title="vue.js"></a>
+
+## Mask更新
